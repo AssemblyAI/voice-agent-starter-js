@@ -11,6 +11,7 @@
     "start": "node deployment/browser/server.mjs",
     "publish": "node publish.mjs",
     "import": "node import.mjs",
-    "phone": "node deployment/telephony/connect.mjs"
+    "phone": "node deployment/telephony/connect.mjs",
+    "test": "node --test test/browser-client.test.mjs"
   }
 }

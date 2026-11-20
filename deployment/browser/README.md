@@ -48,6 +48,8 @@ The session message contains only `{ agent_id }`. Prompt, voice, tools and turn 
 
 Everything is in [server.mjs](server.mjs). The client is the `clientApp` function, stringified and served as `/app.js`, so there is no build step. Save and refresh.
 
+`npm test` runs the call lifecycle tests in [test/browser-client.test.mjs](../../test/browser-client.test.mjs) against that function, with fake browser APIs, so they need no microphone or API key.
+
 ## Hosting
 
 `render.yaml` is configured for one-click deploys. Render prompts for `ASSEMBLYAI_API_KEY` during Blueprint creation, since that is the only variable marked `sync: false`, and sets `PORT` itself. `AGENT` and `AGENT_ID` arrive with defaults and are editable under Environment on the service.
